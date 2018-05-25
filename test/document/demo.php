@@ -2,7 +2,7 @@
 
 include('../../autoload.php');
 
-$parser = new Gregwar\RST\Parser;
+$parser = new Dusta\RST\Parser;
 
 $rst = '
 Hello world

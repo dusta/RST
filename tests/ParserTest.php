@@ -1,17 +1,17 @@
 <?php
 
-use Gregwar\RST\Document;
-use Gregwar\RST\Nodes\Node;
-use Gregwar\RST\Nodes\ParagraphNode;
-use Gregwar\RST\Nodes\RawNode;
-use Gregwar\RST\Nodes\CodeNode;
-use Gregwar\RST\Nodes\QuoteNode;
-use Gregwar\RST\Nodes\TitleNode;
-use Gregwar\RST\Nodes\ListNode;
-use Gregwar\RST\Nodes\TableNode;
-use Gregwar\RST\Nodes\SeparatorNode;
-use Gregwar\RST\Nodes\DummyNode;
-use Gregwar\RST\Parser;
+use Dusta\RST\Document;
+use Dusta\RST\Nodes\Node;
+use Dusta\RST\Nodes\ParagraphNode;
+use Dusta\RST\Nodes\RawNode;
+use Dusta\RST\Nodes\CodeNode;
+use Dusta\RST\Nodes\QuoteNode;
+use Dusta\RST\Nodes\TitleNode;
+use Dusta\RST\Nodes\ListNode;
+use Dusta\RST\Nodes\TableNode;
+use Dusta\RST\Nodes\SeparatorNode;
+use Dusta\RST\Nodes\DummyNode;
+use Dusta\RST\Parser;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -277,9 +277,9 @@ class ParserTests extends TestCase
         $nodes = $this->parse('inclusion-newline.rst')->getNodes();
 
         $this->assertCount(3, $nodes);
-        $this->assertInstanceOf('Gregwar\RST\Nodes\TitleNode', $nodes[0]);
-        $this->assertInstanceOf('Gregwar\RST\Nodes\ParagraphNode', $nodes[1]);
-        $this->assertInstanceOf('Gregwar\RST\Nodes\ParagraphNode', $nodes[2]);
+        $this->assertInstanceOf('Dusta\RST\Nodes\TitleNode', $nodes[0]);
+        $this->assertInstanceOf('Dusta\RST\Nodes\ParagraphNode', $nodes[1]);
+        $this->assertInstanceOf('Dusta\RST\Nodes\ParagraphNode', $nodes[2]);
         $this->assertContains('<p>Test this paragraph is present.</p>', $nodes[1]->render());
         $this->assertContains('<p>And this one as well.</p>', $nodes[2]->render());
     }
@@ -295,7 +295,7 @@ class ParserTests extends TestCase
         $this->assertEquals("This first example will be parsed at the document level, and can\nthus contain any construct, including section headers.", $nodes[0]->getValue()->render());
         $this->assertEquals('This is included.', $nodes[1]->getValue()->render());
         $this->assertEquals('Back in the main document.', $nodes[2]->getValue()->render());
-        $this->assertInstanceOf('Gregwar\RST\Nodes\QuoteNode', $nodes[3]);
+        $this->assertInstanceOf('Dusta\RST\Nodes\QuoteNode', $nodes[3]);
         $this->assertContains('This is included.', $nodes[3]->getValue()->render());
     }
 

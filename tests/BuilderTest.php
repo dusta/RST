@@ -1,8 +1,8 @@
 <?php
 
-use Gregwar\RST\Builder;
-use Gregwar\RST\Document;
-use Gregwar\RST\Parser;
+use Dusta\RST\Builder;
+use Dusta\RST\Document;
+use Dusta\RST\Parser;
 use PHPUnit\Framework\TestCase;
 
 /**

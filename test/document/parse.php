@@ -2,7 +2,7 @@
 
 include('../../autoload.php');
 
-use Gregwar\RST\Parser;
+use Dusta\RST\Parser;
 
 $parser = new Parser;
 $document = $parser->parse(file_get_contents('document.rst'));

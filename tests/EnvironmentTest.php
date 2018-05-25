@@ -1,6 +1,6 @@
 <?php
 
-use Gregwar\RST\Environment;
+use Dusta\RST\Environment;
 use PHPUnit\Framework\TestCase;
 
 /**

@@ -2,7 +2,7 @@
 
 include('../../autoload.php');
 
-use Gregwar\RST\Builder;
+use Dusta\RST\Builder;
 
 try
 {

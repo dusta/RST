@@ -2,8 +2,8 @@
 
 include('../../autoload.php');
 
-use Gregwar\RST\Builder;
-use Gregwar\RST\LaTeX\Kernel;
+use Dusta\RST\Builder;
+use Dusta\RST\LaTeX\Kernel;
 
 try
 {

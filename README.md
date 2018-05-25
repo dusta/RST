@@ -12,7 +12,7 @@ The parser can be used this way:
 ```php
 <?php
 
-$parser = new Gregwar\RST\Parser;
+$parser = new Dusta\RST\Parser;
 
 // RST document
 $rst = '
@@ -55,7 +55,7 @@ You can simply use it with:
 ```php
 <?php
 
-$builder = new Gregwar\RST\Builder;
+$builder = new Dusta\RST\Builder;
 $builder->build('input', 'output');
 ```
 
@@ -92,7 +92,7 @@ $builder->getErrorManager()->abortOnError(false);
 
 ### Step 1: Extends the Directive class
 
-Write your own class that extends the `Gregwar\RST\Directive` class, and define the
+Write your own class that extends the `Dusta\RST\Directive` class, and define the
 method `getName()` that return the directive name.
 
 You can then redefine one of the following method:
