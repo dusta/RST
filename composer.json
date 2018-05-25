@@ -27,6 +27,6 @@
         "phpunit/phpunit": "^7.0"
     },
     "autoload": {
-        "psr-4": {"dusta\\RST": "app/"}
+        "psr-4": {"dusta\\RST": "src/"}
     },
 }
