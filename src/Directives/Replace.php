@@ -1,10 +1,10 @@
 <?php
 
-namespace Gregwar\RST\Directives;
+namespace Dusta\RST\Directives;
 
-use Gregwar\RST\Span;
-use Gregwar\RST\Parser;
-use Gregwar\RST\Directive;
+use Dusta\RST\Span;
+use Dusta\RST\Parser;
+use Dusta\RST\Directive;
 
 /**
  * The Replace directive will set the variables for the spans

@@ -1,10 +1,10 @@
 <?php
 
-namespace Gregwar\RST\HTML\Directives;
+namespace Dusta\RST\HTML\Directives;
 
-use Gregwar\RST\Parser;
-use Gregwar\RST\SubDirective;
-use Gregwar\RST\Nodes\WrapperNode;
+use Dusta\RST\Parser;
+use Dusta\RST\SubDirective;
+use Dusta\RST\Nodes\WrapperNode;
 
 /**
  * Wraps a sub document in a div with a given class

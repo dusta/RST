@@ -1,10 +1,10 @@
 <?php
 
-namespace Gregwar\RST\Directives;
+namespace Dusta\RST\Directives;
 
-use Gregwar\RST\Directive;
-use Gregwar\RST\Parser;
-use Gregwar\RST\Nodes\DummyNode;
+use Dusta\RST\Directive;
+use Dusta\RST\Parser;
+use Dusta\RST\Nodes\DummyNode;
 
 class Dummy extends Directive
 {

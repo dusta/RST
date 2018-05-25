@@ -1,11 +1,11 @@
 <?php
 
-namespace Gregwar\RST\Directives;
+namespace Dusta\RST\Directives;
 
-use Gregwar\RST\Parser;
-use Gregwar\RST\Directive;
+use Dusta\RST\Parser;
+use Dusta\RST\Directive;
 
-use Gregwar\RST\Nodes\DocumentNode;
+use Dusta\RST\Nodes\DocumentNode;
 
 /**
  * Tell that this is a document, in the case of LaTeX for instance,

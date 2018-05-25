@@ -1,8 +1,8 @@
 <?php
 
-namespace Gregwar\RST\Nodes;
+namespace Dusta\RST\Nodes;
 
-use Gregwar\RST\Parser;
+use Dusta\RST\Parser;
 
 abstract class TableNode extends Node
 {

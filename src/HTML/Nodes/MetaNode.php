@@ -1,8 +1,8 @@
 <?php
 
-namespace Gregwar\RST\HTML\Nodes;
+namespace Dusta\RST\HTML\Nodes;
 
-use Gregwar\RST\Nodes\MetaNode as Base;
+use Dusta\RST\Nodes\MetaNode as Base;
 
 class MetaNode extends Base
 {

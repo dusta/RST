@@ -1,8 +1,8 @@
 <?php
 
-namespace Gregwar\RST\Nodes;
+namespace Dusta\RST\Nodes;
 
-use Gregwar\RST\Nodes\Node as Base;
+use Dusta\RST\Nodes\Node as Base;
 
 class DocumentNode extends Base
 {

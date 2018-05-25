@@ -1,9 +1,9 @@
 <?php
 
-namespace Gregwar\RST\HTML\Nodes;
+namespace Dusta\RST\HTML\Nodes;
 
-use Gregwar\RST\Environment;
-use Gregwar\RST\Nodes\TocNode as Base;
+use Dusta\RST\Environment;
+use Dusta\RST\Nodes\TocNode as Base;
 
 class TocNode extends Base
 {

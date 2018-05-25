@@ -1,8 +1,8 @@
 <?php
 
-namespace Gregwar\RST\HTML\Nodes;
+namespace Dusta\RST\HTML\Nodes;
 
-use Gregwar\RST\Nodes\SeparatorNode as Base;
+use Dusta\RST\Nodes\SeparatorNode as Base;
 
 class SeparatorNode extends Base
 {

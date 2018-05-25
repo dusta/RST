@@ -1,8 +1,8 @@
 <?php
 
-namespace Gregwar\RST\HTML\Nodes;
+namespace Dusta\RST\HTML\Nodes;
 
-use Gregwar\RST\Nodes\AnchorNode as Base;
+use Dusta\RST\Nodes\AnchorNode as Base;
 
 class AnchorNode extends Base
 {

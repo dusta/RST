@@ -1,9 +1,9 @@
 <?php
 
-namespace Gregwar\RST\HTML\Nodes;
+namespace Dusta\RST\HTML\Nodes;
 
-use Gregwar\RST\Environment;
-use Gregwar\RST\Nodes\TitleNode as Base;
+use Dusta\RST\Environment;
+use Dusta\RST\Nodes\TitleNode as Base;
 
 class TitleNode extends Base
 {

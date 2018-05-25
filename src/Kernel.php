@@ -1,9 +1,9 @@
 <?php
 
-namespace Gregwar\RST;
+namespace Dusta\RST;
 
-use Gregwar\RST\Builder;
-use Gregwar\RST\Document;
+use Dusta\RST\Builder;
+use Dusta\RST\Document;
 
 abstract class Kernel
 {
@@ -17,7 +17,7 @@ abstract class Kernel
      */
     public function getClass($name)
     {
-        return 'Gregwar\RST\\'.$this->getName().'\\'.$name;
+        return 'Dusta\RST\\'.$this->getName().'\\'.$name;
     }
 
     /**

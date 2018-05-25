@@ -1,8 +1,8 @@
 <?php
 
-namespace Gregwar\RST\HTML\Nodes;
+namespace Dusta\RST\HTML\Nodes;
 
-use Gregwar\RST\Nodes\QuoteNode as Base;
+use Dusta\RST\Nodes\QuoteNode as Base;
 
 class QuoteNode extends Base
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Gregwar\RST;
+namespace Dusta\RST;
 
 class Parser
 {
@@ -54,7 +54,7 @@ class Parser
     public function __construct($environment = null, $kernel = null)
     {
         if ($kernel == null) {
-            $kernel = new \Gregwar\RST\HTML\Kernel;
+            $kernel = new \Dusta\RST\HTML\Kernel;
         }
         $this->kernel = $kernel;
 

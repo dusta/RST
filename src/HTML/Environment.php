@@ -1,8 +1,8 @@
 <?php
 
-namespace Gregwar\RST\HTML;
+namespace Dusta\RST\HTML;
 
-use Gregwar\RST\Environment as Base;
+use Dusta\RST\Environment as Base;
 
 class Environment extends Base
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Gregwar\RST;
+namespace Dusta\RST;
 
-use Gregwar\RST\Nodes\Node;
+use Dusta\RST\Nodes\Node;
 
 abstract class Span extends Node
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Gregwar\RST\HTML;
+namespace Dusta\RST\HTML;
 
-use Gregwar\RST\Span as Base;
+use Dusta\RST\Span as Base;
 
 class Span extends Base
 {

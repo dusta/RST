@@ -1,11 +1,11 @@
 <?php
 
-namespace Gregwar\RST\HTML\Directives;
+namespace Dusta\RST\HTML\Directives;
 
-use Gregwar\RST\Parser;
-use Gregwar\RST\Directive;
+use Dusta\RST\Parser;
+use Dusta\RST\Directive;
 
-use Gregwar\RST\HTML\Nodes\ImageNode;
+use Dusta\RST\HTML\Nodes\ImageNode;
 
 /**
  * Renders an image, example :

@@ -1,6 +1,6 @@
 <?php
 
-namespace Gregwar\RST;
+namespace Dusta\RST;
 
 /**
  * A builder can parses a whole directory to build the target architecture

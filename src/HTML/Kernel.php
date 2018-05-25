@@ -1,8 +1,8 @@
 <?php
 
-namespace Gregwar\RST\HTML;
+namespace Dusta\RST\HTML;
 
-use Gregwar\RST\Kernel as Base;
+use Dusta\RST\Kernel as Base;
 
 class Kernel extends Base
 {

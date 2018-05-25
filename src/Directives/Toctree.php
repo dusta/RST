@@ -1,10 +1,10 @@
 <?php
 
-namespace Gregwar\RST\Directives;
+namespace Dusta\RST\Directives;
 
-use Gregwar\RST\Directive;
-use Gregwar\RST\Environment;
-use Gregwar\RST\Parser;
+use Dusta\RST\Directive;
+use Dusta\RST\Environment;
+use Dusta\RST\Parser;
 
 class Toctree extends Directive
 {

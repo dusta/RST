@@ -1,6 +1,6 @@
 <?php
 
-namespace Gregwar\RST;
+namespace Dusta\RST;
 
 class Metas
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Gregwar\RST\Directives;
+namespace Dusta\RST\Directives;
 
-use Gregwar\RST\Nodes\TitleNode;
-use Gregwar\RST\Span;
-use Gregwar\RST\Parser;
-use Gregwar\RST\Directive;
+use Dusta\RST\Nodes\TitleNode;
+use Dusta\RST\Span;
+use Dusta\RST\Parser;
+use Dusta\RST\Directive;
 
 /**
  * This sets a new target for a following title, this can be used to change

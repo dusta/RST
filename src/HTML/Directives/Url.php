@@ -1,9 +1,9 @@
 <?php
 
-namespace Gregwar\RST\HTML\Directives;
+namespace Dusta\RST\HTML\Directives;
 
-use Gregwar\RST\Directive;
-use Gregwar\RST\Parser;
+use Dusta\RST\Directive;
+use Dusta\RST\Parser;
 
 /**
  * Sets the document URL

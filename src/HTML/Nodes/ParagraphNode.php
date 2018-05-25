@@ -1,8 +1,8 @@
 <?php
 
-namespace Gregwar\RST\HTML\Nodes;
+namespace Dusta\RST\HTML\Nodes;
 
-use Gregwar\RST\Nodes\ParagraphNode as Base;
+use Dusta\RST\Nodes\ParagraphNode as Base;
 
 class ParagraphNode extends Base
 {

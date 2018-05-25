@@ -1,6 +1,6 @@
 <?php
 
-namespace Gregwar\RST;
+namespace Dusta\RST;
 
 /**
  * A directive is like a function you can call or apply to a block

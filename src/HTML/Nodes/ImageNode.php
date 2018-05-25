@@ -1,8 +1,8 @@
 <?php
 
-namespace Gregwar\RST\HTML\Nodes;
+namespace Dusta\RST\HTML\Nodes;
 
-use Gregwar\RST\Nodes\ImageNode as Base;
+use Dusta\RST\Nodes\ImageNode as Base;
 
 class ImageNode extends Base
 {

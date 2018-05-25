@@ -1,10 +1,10 @@
 <?php
 
-namespace Gregwar\RST\HTML;
+namespace Dusta\RST\HTML;
 
-use Gregwar\RST\Document as Base;
+use Dusta\RST\Document as Base;
 
-use Gregwar\RST\Nodes\RawNode;
+use Dusta\RST\Nodes\RawNode;
 
 class Document extends Base
 {

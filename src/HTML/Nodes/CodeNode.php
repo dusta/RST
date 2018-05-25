@@ -1,8 +1,8 @@
 <?php
 
-namespace Gregwar\RST\HTML\Nodes;
+namespace Dusta\RST\HTML\Nodes;
 
-use Gregwar\RST\Nodes\CodeNode as Base;
+use Dusta\RST\Nodes\CodeNode as Base;
 
 class CodeNode extends Base
 {

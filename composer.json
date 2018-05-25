@@ -32,7 +32,7 @@
     },
     "autoload": {
         "psr-4": {
-            "dusta\\rst\\": "src/"
+            "Dusta\\RST\\": "src/"
         }
     }
 }

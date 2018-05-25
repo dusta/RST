@@ -1,8 +1,8 @@
 <?php
 
-namespace Gregwar\RST\Nodes;
+namespace Dusta\RST\Nodes;
 
-use Gregwar\RST\Environment;
+use Dusta\RST\Environment;
 
 abstract class TocNode extends Node
 {

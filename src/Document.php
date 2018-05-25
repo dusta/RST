@@ -1,11 +1,11 @@
 <?php
 
-namespace Gregwar\RST;
+namespace Dusta\RST;
 
-use Gregwar\RST\Nodes\Node;
-use Gregwar\RST\Nodes\TitleNode;
-use Gregwar\RST\Nodes\TocNode;
-use Gregwar\RST\Nodes\RawNode;
+use Dusta\RST\Nodes\Node;
+use Dusta\RST\Nodes\TitleNode;
+use Dusta\RST\Nodes\TocNode;
+use Dusta\RST\Nodes\RawNode;
 
 abstract class Document extends Node
 {

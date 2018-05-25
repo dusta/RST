@@ -1,8 +1,8 @@
 <?php
 
-namespace Gregwar\RST\HTML\Nodes;
+namespace Dusta\RST\HTML\Nodes;
 
-use Gregwar\RST\Nodes\TableNode as Base;
+use Dusta\RST\Nodes\TableNode as Base;
 
 class TableNode extends Base
 {

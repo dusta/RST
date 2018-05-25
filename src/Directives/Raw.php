@@ -1,12 +1,12 @@
 <?php
 
-namespace Gregwar\RST\Directives;
+namespace Dusta\RST\Directives;
 
-use Gregwar\RST\Parser;
-use Gregwar\RST\Directive;
+use Dusta\RST\Parser;
+use Dusta\RST\Directive;
 
-use Gregwar\RST\Nodes\WrapperNode;
-use Gregwar\RST\Nodes\CodeNode;
+use Dusta\RST\Nodes\WrapperNode;
+use Dusta\RST\Nodes\CodeNode;
 
 /**
  * Renders a raw block, example:

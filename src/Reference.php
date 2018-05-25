@@ -1,6 +1,6 @@
 <?php
 
-namespace Gregwar\RST;
+namespace Dusta\RST;
 
 /**
  * A reference is something that can be resolved in the document, for instance:

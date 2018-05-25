@@ -1,9 +1,9 @@
 <?php
 
-namespace Gregwar\RST\References;
+namespace Dusta\RST\References;
 
-use Gregwar\RST\Reference;
-use Gregwar\RST\Environment;
+use Dusta\RST\Reference;
+use Dusta\RST\Environment;
 
 class Doc extends Reference
 {

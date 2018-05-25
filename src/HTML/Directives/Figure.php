@@ -1,12 +1,12 @@
 <?php
 
-namespace Gregwar\RST\HTML\Directives;
+namespace Dusta\RST\HTML\Directives;
 
-use Gregwar\RST\Parser;
-use Gregwar\RST\SubDirective;
+use Dusta\RST\Parser;
+use Dusta\RST\SubDirective;
 
-use Gregwar\RST\HTML\Nodes\ImageNode;
-use Gregwar\RST\HTML\Nodes\FigureNode;
+use Dusta\RST\HTML\Nodes\ImageNode;
+use Dusta\RST\HTML\Nodes\FigureNode;
 
 /**
  * Renders an image, example :

@@ -1,6 +1,6 @@
 <?php
 
-namespace Gregwar\RST\Nodes;
+namespace Dusta\RST\Nodes;
 
 class DummyNode extends Node
 {
