@@ -77,7 +77,7 @@ class Parser
     /**
      * Try to parse a link definition
      *
-     * @param string $line
+     * @param  string $line
      * @return bool
      */
     public function parseLink($line)
@@ -167,6 +167,7 @@ class Parser
 
     /**
      * Tells if the current buffer is announcing a block of code
+     *
      * @return bool
      */
     protected function prepareCode()
@@ -201,7 +202,7 @@ class Parser
      * Tell if a line is a special separating line for title and separators,
      * returns the depth of the special line
      *
-     * @param string $line
+     * @param  string $line
      * @return bool
      */
     protected function isSpecialLine($line)
@@ -229,7 +230,7 @@ class Parser
     /**
      * Finding the table chars
      *
-     * @param string $line
+     * @param  string $line
      * @return array|bool
      */
     protected function findTableChars($line)
@@ -262,7 +263,7 @@ class Parser
      * +---------------------+---------+-----------+
      *  1                     23        33
      *
-     * @param string $line
+     * @param  string $line
      * @return mixed
      */
     protected function parseTableLine($line)
@@ -327,7 +328,7 @@ class Parser
     /**
      * Parses a list line
      *
-     * @param string $line the string line
+     * @param  string $line the string line
      * @return array containing:
      *         - true if the list is ordered, false else
      *         - the depth of the list
@@ -370,7 +371,7 @@ class Parser
     /**
      * Is the given line a list line ?
      *
-     * @param string $line
+     * @param  string $line
      * @return bool true if the given line is a list line
      */
     protected function isListLine($line)
@@ -392,8 +393,8 @@ class Parser
     /**
      * Push a line to the current list node buffer
      *
-     * @param string $line
-     * @param bool $flush
+     * @param  string $line
+     * @param  bool   $flush
      * @return bool
      */
     public function pushListLine($line, $flush = false)
@@ -441,7 +442,7 @@ class Parser
      *
      *     This is still part of the block, even if there is an empty line
      *
-     * @param string $line the line text
+     * @param  string $line the line text
      * @return bool true if the line is still in a block
      */
     protected function isBlockLine($line)
@@ -460,7 +461,7 @@ class Parser
      *     :option: value
      *     :otherOption: otherValue
      *
-     * @param string $line
+     * @param  string $line
      * @return false if this is not a directive, else an array containing :
      *         - variable: the variable name of the directive
      *         - name: the directive name
@@ -486,7 +487,7 @@ class Parser
     /**
      * Is this line a comment ?
      *
-     * @param string $line the line
+     * @param  string $line the line
      * @return bool true if it's a comment
      */
     protected function isComment($line)
@@ -497,7 +498,7 @@ class Parser
     /**
      * Is this line a directive ?
      *
-     * @param string $line the line
+     * @param  string $line the line
      * @return bool true if it's a directive
      */
     protected function isDirective($line)
@@ -764,7 +765,7 @@ class Parser
     /**
      * Is this file allowed to be included?
      *
-     * @param $path
+     * @param  $path
      * @return bool
      */
     public function includeFileAllowed($path)
@@ -796,14 +797,16 @@ class Parser
         $environment = $this->getEnvironment();
         $parser = $this;
 
-        return preg_replace_callback('/^\.\. include:: (.+)$/m', function($match) use ($parser, $environment) {
-            $path = $environment->absoluteRelativePath($match[1]);
-            if ($parser->includeFileAllowed($path)) {
-                return $parser->includeFiles(file_get_contents($path));
-            } else {
-                return '';
-            }
-        }, $document);
+        return preg_replace_callback(
+            '/^\.\. include:: (.+)$/m', function ($match) use ($parser, $environment) {
+                $path = $environment->absoluteRelativePath($match[1]);
+                if ($parser->includeFileAllowed($path)) {
+                    return $parser->includeFiles(file_get_contents($path));
+                } else {
+                    return '';
+                }
+            }, $document
+        );
     }
 
     /**
@@ -827,7 +830,8 @@ class Parser
 
         foreach ($lines as $n => $line) {
             $this->currentLine = $n;
-            while (!$this->parseLine($line));
+            while (!$this->parseLine($line)) {
+            }
         }
 
         // Document is flushed twice to trigger the directives
@@ -838,7 +842,7 @@ class Parser
     /**
      * Parse a document and return a Document instance
      *
-     * @param string $document The contents (string) of the document
+     * @param  string $document The contents (string) of the document
      * @return Document The created document
      */
     public function parse($document)
@@ -868,7 +872,7 @@ class Parser
     /**
      * Parses a given file and return a Document instance
      *
-     * @param string $file the file name to parse
+     * @param  string $file the file name to parse
      * @return Document $document the document instance
      */
     public function parseFile($file)
@@ -896,7 +900,7 @@ class Parser
     /**
      * Create a span, which is a text with inline style
      *
-     * @param $span the content string
+     * @param  $span the content string
      * @return Span a span object
      */
     public function createSpan($span)
@@ -923,8 +927,8 @@ class Parser
     /**
      * Allow/disallow includes, or restrict them to a directory
      *
-     * @param bool $allow
-     * @param string $directory
+     * @param  bool   $allow
+     * @param  string $directory
      * @return self
      */
     public function setIncludePolicy($allow, $directory = null)

@@ -16,7 +16,6 @@ use Dusta\RST\HTML\Nodes\FigureNode;
  *      :title: An image
  *
  *      Here is an awesome caption
- *
  */
 class Figure extends SubDirective
 {

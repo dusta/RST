@@ -13,7 +13,6 @@ use Dusta\RST\HTML\Nodes\ImageNode;
  * .. image:: image.jpg
  *      :width: 100
  *      :title: An image
- *
  */
 class Image extends Directive
 {

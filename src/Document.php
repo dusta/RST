@@ -70,9 +70,11 @@ abstract class Document extends Node
     {
         $tocs = array();
 
-        $nodes = $this->getNodes(function($node) {
-            return $node instanceof TocNode;
-        });
+        $nodes = $this->getNodes(
+            function ($node) {
+                return $node instanceof TocNode;
+            }
+        );
 
         foreach ($nodes as $toc) {
             $files = $toc->getFiles();

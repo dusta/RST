@@ -54,7 +54,7 @@ class Span extends Base
             }
             $link = $this->link($url, $text);
 
-        // reference to anchor in existing document
+            // reference to anchor in existing document
         } elseif ($value['url']) {
             $url = $this->environment->getLink($value['url']);
 

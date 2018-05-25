@@ -316,7 +316,7 @@ class Builder
         $metaFile = $this->getMetaFile();
 
         if (file_exists($metaFile)) {
-            return @include($metaFile);
+            return @include $metaFile;
         }
 
         return null;

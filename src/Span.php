@@ -19,31 +19,35 @@ abstract class Span extends Node
 
         $tokenId = 0;
         $prefix = mt_rand().'|'.time();
-        $generator = function() use ($prefix, &$tokenId) {
+        $generator = function () use ($prefix, &$tokenId) {
             $tokenId++;
             return sha1($prefix.'|'.$tokenId);
         };
 
         // Replacing literal with tokens
         $tokens = array();
-        $span = preg_replace_callback('/``(.+)``(?!`)/mUsi', function($match) use (&$tokens, $generator) {
-            $id = $generator();
-            $tokens[$id] = array(
+        $span = preg_replace_callback(
+            '/``(.+)``(?!`)/mUsi', function ($match) use (&$tokens, $generator) {
+                $id = $generator();
+                $tokens[$id] = array(
                 'type' => 'literal',
                 'text' => htmlspecialchars($match[1])
-            );
+                );
 
-            return $id;
-        }, $span);
+                return $id;
+            }, $span
+        );
 
         $environment = $parser->getEnvironment();
         $this->environment = $environment;
 
         // Replacing numbering
         foreach ($environment->getTitleLetters() as $level => $letter) {
-            $span = preg_replace_callback('/\#\\'.$letter.'/mUsi', function($match) use ($environment, $level) {
-                return $environment->getNumber($level);
-            }, $span);
+            $span = preg_replace_callback(
+                '/\#\\'.$letter.'/mUsi', function ($match) use ($environment, $level) {
+                    return $environment->getNumber($level);
+                }, $span
+            );
         }
 
         // Signaling anonymous names
@@ -56,38 +60,40 @@ abstract class Span extends Node
         }
 
         // Looking for references to other documents
-        $span = preg_replace_callback('/:([a-z0-9]+):`(.+)`/mUsi', function($match) use (&$environment, $generator, &$tokens) {
-            $section = $match[1];
-            $url = $match[2];
-            $id = $generator();
-            $anchor = null;
-
-            $text = null;
-            if (preg_match('/^(.+)<(.+)>$/mUsi', $url, $match)) {
-                $text = $match[1];
+        $span = preg_replace_callback(
+            '/:([a-z0-9]+):`(.+)`/mUsi', function ($match) use (&$environment, $generator, &$tokens) {
+                $section = $match[1];
                 $url = $match[2];
-            }
+                $id = $generator();
+                $anchor = null;
 
-            if (preg_match('/^(.+)#(.+)$/mUsi', $url, $match)) {
-                $url = $match[1];
-                $anchor = $match[2];
-            }
+                $text = null;
+                if (preg_match('/^(.+)<(.+)>$/mUsi', $url, $match)) {
+                    $text = $match[1];
+                    $url = $match[2];
+                }
 
-            $tokens[$id] = array(
+                if (preg_match('/^(.+)#(.+)$/mUsi', $url, $match)) {
+                    $url = $match[1];
+                    $anchor = $match[2];
+                }
+
+                $tokens[$id] = array(
                 'type' => 'reference',
                 'section' => $section,
                 'url' => $url,
                 'text' => $text,
                 'anchor' => $anchor
-            );
+                );
 
-            $environment->found($section, $url);
+                $environment->found($section, $url);
 
-            return $id;
-        }, $span);
+                return $id;
+            }, $span
+        );
 
         // Link callback
-        $linkCallback = function($match) use ($environment, $generator, &$tokens) {
+        $linkCallback = function ($match) use ($environment, $generator, &$tokens) {
             $link = $match[2] ?: $match[4];
             $id = $generator();
             $next = $match[5];
@@ -145,20 +151,26 @@ abstract class Span extends Node
         $span = $this->escape($data);
 
         // Emphasis
-        $span = preg_replace_callback('/\*\*(.+)\*\*/mUsi', function ($matches) use ($self) {
-          return $self->strongEmphasis($matches[1]);
-        }, $span);
-        $span = preg_replace_callback('/\*(.+)\*/mUsi', function ($matches) use ($self) {
-          return $self->emphasis($matches[1]);
-        }, $span);
+        $span = preg_replace_callback(
+            '/\*\*(.+)\*\*/mUsi', function ($matches) use ($self) {
+                return $self->strongEmphasis($matches[1]);
+            }, $span
+        );
+        $span = preg_replace_callback(
+            '/\*(.+)\*/mUsi', function ($matches) use ($self) {
+                return $self->emphasis($matches[1]);
+            }, $span
+        );
 
         // Nbsp
         $span = preg_replace('/~/', $this->nbsp(), $span);
 
         // Replacing variables
-        $span = preg_replace_callback('/\|(.+)\|/mUsi', function($match) use ($environment) {
-            return $environment->getVariable($match[1]);
-        }, $span);
+        $span = preg_replace_callback(
+            '/\|(.+)\|/mUsi', function ($match) use ($environment) {
+                return $environment->getVariable($match[1]);
+            }, $span
+        );
 
         // Adding brs when a space is at the end of a line
         $span = preg_replace('/ \n/', $this->br(), $span);
@@ -187,7 +199,7 @@ abstract class Span extends Node
                 if ($reference) {
                     $link = $this->reference($reference, $value);
 
-                // try to resolve by text second
+                    // try to resolve by text second
                 } else {
                     $reference = $environment->resolveByText($value['section'], $value['text']);
 
