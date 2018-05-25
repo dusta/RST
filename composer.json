@@ -1,7 +1,11 @@
 {
     "name": "dusta/rst",
     "description": "PHP library to parse reStructuredText documents",
-    "keywords": ["rst", "markup", "parser"],
+    "keywords": [
+        "rst",
+        "markup",
+        "parser"
+    ],
     "homepage": "https://github.com/dusta/RST",
     "license": "MIT",
     "authors": [
@@ -27,6 +31,8 @@
         "phpunit/phpunit": "^7.0"
     },
     "autoload": {
-        "psr-4": {"dusta\\RST": "src/"}
+        "psr-4": {
+            "dusta\\RST": "src/"
+        }
     },
 }
