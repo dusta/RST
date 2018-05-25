@@ -13,7 +13,7 @@ class FigureNode extends Base
         if ($this->document) {
             $caption = trim($this->document->render());
             if ($caption) {
-                $html .= '<figcaption>'.$caption.'</figcaption>';
+                $html .= '<figcaption>' . $caption . '</figcaption>';
             }
         }
         $html .= '</figure>';

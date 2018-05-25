@@ -8,6 +8,6 @@ class AnchorNode extends Base
 {
     public function render()
     {
-        return '<a id="'.$this->value.'"></a>';
+        return '<a id="' . $this->value . '"></a>';
     }
 }

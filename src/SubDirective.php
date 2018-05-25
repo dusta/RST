@@ -2,7 +2,7 @@
 
 namespace Gregwar\RST;
 
-use Gregwar\RST\Nodes\CodeNode;
+use Dusta\RST\Nodes\CodeNode;
 
 /**
  * A directive that parses the sub block and call the processSub that can
