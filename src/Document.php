@@ -56,7 +56,7 @@ abstract class Document extends Node
     {
         foreach ($this->nodes as $node) {
             if ($node instanceof TitleNode && $node->getLevel() == 1) {
-                return $node->getValue().'';
+                return $node->getValue() . '';
             }
         }
 
@@ -112,11 +112,11 @@ abstract class Document extends Node
                 $redirection = $node->getTarget();
                 $value = $redirection ? array($text, $redirection) : $text;
 
-                if (isset($levels[$level-1])) {
-                    $parent = &$levels[$level-1];
+                if (isset($levels[$level - 1])) {
+                    $parent = &$levels[$level - 1];
                     $element = array($value, array());
                     $parent[] = $element;
-                    $levels[$level] = &$parent[count($parent)-1][1];
+                    $levels[$level] = &$parent[count($parent) - 1][1];
                 }
             }
         }

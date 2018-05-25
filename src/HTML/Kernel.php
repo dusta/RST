@@ -16,15 +16,16 @@ class Kernel extends Base
         $directives = parent::getDirectives();
 
         $directives = array_merge(
-            $directives, array(
-            new Directives\Image,
-            new Directives\Figure,
-            new Directives\Meta,
-            new Directives\Stylesheet,
-            new Directives\Title,
-            new Directives\Url,
-            new Directives\Div,
-            new Directives\Wrap('note')
+            $directives,
+            array(
+                new Directives\Image,
+                new Directives\Figure,
+                new Directives\Meta,
+                new Directives\Stylesheet,
+                new Directives\Title,
+                new Directives\Url,
+                new Directives\Div,
+                new Directives\Wrap('note')
             )
         );
 

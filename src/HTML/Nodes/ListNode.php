@@ -20,6 +20,6 @@ class ListNode extends Base
     {
         $keyword = $ordered ? 'ol' : 'ul';
 
-        return array('<'.$keyword.'>', '</'.$keyword.'>');
+        return array('<' . $keyword . '>', '</' . $keyword . '>');
     }
 }

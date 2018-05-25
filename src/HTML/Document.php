@@ -26,7 +26,7 @@ class Document extends Base
         $document .= "<head>\n";
         $document .= "<meta charset=\"utf-8\" />\n";
         foreach ($this->headerNodes as $node) {
-            $document .= $node->render()."\n";
+            $document .= $node->render() . "\n";
         }
         $document .= "</head>\n";
 
@@ -43,7 +43,7 @@ class Document extends Base
         $environment = $this->getEnvironment();
         $css = $environment->relativeUrl($css);
 
-        $this->addHeaderNode(new RawNode('<link rel="stylesheet" type="text/css" href="'.htmlspecialchars($css).'" />'));
+        $this->addHeaderNode(new RawNode('<link rel="stylesheet" type="text/css" href="' . htmlspecialchars($css) . '" />'));
     }
 
     public function addJs($js)
@@ -51,7 +51,7 @@ class Document extends Base
         $environment = $this->getEnvironment();
         $js = $environment->relativeUrl($js);
 
-        $this->addHeaderNode(new RawNode('<script type="text/javascript" src="'.htmlspecialchars($js).'"></script>'));
+        $this->addHeaderNode(new RawNode('<script type="text/javascript" src="' . htmlspecialchars($js) . '"></script>'));
     }
 
     public function addFavicon($url = '/favicon.ico')
@@ -59,6 +59,6 @@ class Document extends Base
         $environment = $this->getEnvironment();
         $url = $environment->relativeUrl($url);
 
-        $this->addHeaderNode(new RawNode('<link rel="icon" type="image/x-icon" href="'.htmlspecialchars($url).'" />'));
+        $this->addHeaderNode(new RawNode('<link rel="icon" type="image/x-icon" href="' . htmlspecialchars($url) . '" />'));
     }
 }

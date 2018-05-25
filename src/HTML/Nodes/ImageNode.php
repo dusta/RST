@@ -10,9 +10,9 @@ class ImageNode extends Base
     {
         $attributes = '';
         foreach ($this->options as $key => $value) {
-            $attributes .= ' '.$key . '="'.htmlspecialchars($value).'"';
+            $attributes .= ' ' . $key . '="' . htmlspecialchars($value) . '"';
         }
 
-        return '<img src="'.$this->url.'" '.$attributes.' />';
+        return '<img src="' . $this->url . '" ' . $attributes . ' />';
     }
 }

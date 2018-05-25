@@ -70,7 +70,7 @@ class Environment
         $this->levels = array();
         $this->counters = array();
 
-        for ($level=0; $level<16; $level++) {
+        for ($level = 0; $level < 16; $level++) {
             $this->levels[$level] = 1;
             $this->counters[$level] = 0;
         }
@@ -162,7 +162,7 @@ class Environment
             return $reference->resolve($this, $data);
         }
 
-        $this->errorManager->error('Unknown reference section '.$section);
+        $this->errorManager->error('Unknown reference section ' . $section);
     }
 
     /**
@@ -176,7 +176,7 @@ class Environment
             return $reference->resolveByText($this, $text);
         }
 
-        $this->errorManager->error('Unknown reference section '.$section);
+        $this->errorManager->error('Unknown reference section ' . $section);
     }
 
     public function found($section, $data)
@@ -187,7 +187,7 @@ class Environment
             return $reference->found($this, $data);
         }
 
-        $this->errorManager->error('Unknown reference section '.$section);
+        $this->errorManager->error('Unknown reference section ' . $section);
     }
 
     /**
@@ -206,7 +206,7 @@ class Environment
      */
     public function createTitle($level)
     {
-        for ($currentLevel=0; $currentLevel<16; $currentLevel++) {
+        for ($currentLevel = 0; $currentLevel < 16; $currentLevel++) {
             if ($currentLevel > $level) {
                 $this->levels[$currentLevel] = 1;
                 $this->counters[$currentLevel] = 0;
@@ -217,7 +217,7 @@ class Environment
         $this->counters[$level]++;
         $token = array('title');
 
-        for ($i=1; $i<=$level; $i++) {
+        for ($i = 1; $i <= $level; $i++) {
             $token[] = $this->counters[$i];
         }
 
@@ -336,7 +336,7 @@ class Environment
                 // Else, returns enough ../ to get upper
                 $relative = '';
 
-                for ($k=0; $k<$this->getDepth(); $k++) {
+                for ($k = 0; $k < $this->getDepth(); $k++) {
                     $relative .= '../';
                 }
 
@@ -371,7 +371,7 @@ class Environment
      */
     public function getDepth()
     {
-        return count(explode('/', $this->currentFileName))-1;
+        return count(explode('/', $this->currentFileName)) - 1;
     }
 
     /**
@@ -388,8 +388,8 @@ class Environment
             return false;
         }
 
-        unset($partsA[$n-1]);
-        unset($partsB[$n-1]);
+        unset($partsA[$n - 1]);
+        unset($partsB[$n - 1]);
 
         return $partsA == $partsB;
     }
@@ -441,7 +441,7 @@ class Environment
             } else {
                 // Else, the canonical name is under the current dir
                 if ($this->getDirName()) {
-                    return $this->canonicalize($this->getDirName() . '/' .$url);
+                    return $this->canonicalize($this->getDirName() . '/' . $url);
                 } else {
                     return $this->canonicalize($url);
                 }

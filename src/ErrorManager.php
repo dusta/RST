@@ -16,7 +16,7 @@ class ErrorManager
         if ($this->abort) {
             throw new \Exception($message);
         } else {
-            echo '/!\\ '.$message."\n";
+            echo '/!\\ ' . $message . "\n";
         }
     }
 }

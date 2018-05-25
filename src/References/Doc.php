@@ -30,7 +30,7 @@ class Doc extends Reference
             // only call relativeUrl() if a document was found
             // so we can later try to link to an anchor in this document
             if ($entry['url']) {
-                $entry['url'] = $environment->relativeUrl('/'.$entry['url']);
+                $entry['url'] = $environment->relativeUrl('/' . $entry['url']);
             }
         } else {
             $entry = array(
@@ -70,7 +70,7 @@ class Doc extends Reference
             // only call relativeUrl() if a document was found
             // so we can later try to link to an anchor in this document
             if ($entry['url']) {
-                $entry['url'] = $environment->relativeUrl('/'.$entry['url']);
+                $entry['url'] = $environment->relativeUrl('/' . $entry['url']);
             }
         } else {
             $entry = array(

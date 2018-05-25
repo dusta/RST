@@ -34,22 +34,22 @@ abstract class ListNode extends Node
             if ($depth < $newDepth) {
                 $tags = $this->createList($ordered);
                 $value .= $tags[0];
-                $stack[] = array($newDepth, $tags[1]."\n");
+                $stack[] = array($newDepth, $tags[1] . "\n");
                 $depth = $newDepth;
             }
 
             while ($depth > $newDepth) {
-                $top = $stack[count($stack)-1];
+                $top = $stack[count($stack) - 1];
 
                 if ($top[0] > $newDepth) {
                     $value .= $top[1];
                     array_pop($stack);
-                    $top = $stack[count($stack)-1];
+                    $top = $stack[count($stack) - 1];
                     $depth = $top[0];
                 }
             }
 
-            $value .= $this->createElement($text, $prefix)."\n";
+            $value .= $this->createElement($text, $prefix) . "\n";
         }
 
         while ($stack) {

@@ -11,6 +11,6 @@ class TitleNode extends Base
     {
         $anchor = Environment::slugify($this->value);
 
-        return '<a id="'.$anchor.'"></a><h'.$this->level.'>'.$this->value.'</h'.$this->level.">";
+        return '<a id="' . $anchor . '"></a><h' . $this->level . '>' . $this->value . '</h' . $this->level . ">";
     }
 }

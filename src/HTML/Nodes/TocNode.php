@@ -15,7 +15,7 @@ class TocNode extends Base
 
         $html = '';
         foreach ($titles as $k => $entry) {
-            $path[$level-1] = $k+1;
+            $path[$level - 1] = $k + 1;
             list($title, $childs) = $entry;
 
             $slug = $title;
@@ -25,7 +25,7 @@ class TocNode extends Base
             }
 
             $anchor = Environment::slugify($slug);
-            $target = $url.'#'.$anchor;
+            $target = $url . '#' . $anchor;
 
             if (is_array($title)) {
                 list($title, $target) = $title;
@@ -36,11 +36,11 @@ class TocNode extends Base
             $id = str_replace('../', '', $target);
             $id = str_replace(['#', '.', '/'], '-', $id);
 
-            $html .= '<li id="'.$id.'" class="toc-item"><a href="'.$target.'">'.$title.'</a></li>';
+            $html .= '<li id="' . $id . '" class="toc-item"><a href="' . $target . '">' . $title . '</a></li>';
 
             if ($childs) {
                 $html .= '<ul>';
-                $html .= $this->renderLevel($url, $childs, $level+1, $path);
+                $html .= $this->renderLevel($url, $childs, $level + 1, $path);
                 $html .= '</ul>';
             }
         }

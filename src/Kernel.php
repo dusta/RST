@@ -17,7 +17,7 @@ abstract class Kernel
      */
     public function getClass($name)
     {
-        return 'Dusta\RST\\'.$this->getName().'\\'.$name;
+        return 'Dusta\RST\\' . $this->getName() . '\\' . $name;
     }
 
     /**

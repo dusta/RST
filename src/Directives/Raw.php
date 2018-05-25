@@ -4,7 +4,6 @@ namespace Dusta\RST\Directives;
 
 use Dusta\RST\Parser;
 use Dusta\RST\Directive;
-
 use Dusta\RST\Nodes\WrapperNode;
 use Dusta\RST\Nodes\CodeNode;
 

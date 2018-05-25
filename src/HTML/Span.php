@@ -8,12 +8,12 @@ class Span extends Base
 {
     public function emphasis($text)
     {
-        return '<em>'.$text.'</em>';
+        return '<em>' . $text . '</em>';
     }
 
     public function strongEmphasis($text)
     {
-        return '<strong>'.$text.'</strong>';
+        return '<strong>' . $text . '</strong>';
     }
 
     public function nbsp()
@@ -28,12 +28,12 @@ class Span extends Base
 
     public function literal($text)
     {
-        return '<code>'.$text.'</code>';
+        return '<code>' . $text . '</code>';
     }
 
     public function link($url, $title)
     {
-        return '<a href="'.htmlspecialchars($url).'">'.$title.'</a>';
+        return '<a href="' . htmlspecialchars($url) . '">' . $title . '</a>';
     }
 
     public function escape($span)
@@ -43,7 +43,7 @@ class Span extends Base
 
     public function reference($reference, $value)
     {
-        $text = $value['text'] ?: (isset($reference['title']) ? $reference['title'] : '');
+        $text = $value['text'] ? : (isset($reference['title']) ? $reference['title'] : '');
         $text = trim($text);
 
         // reference to another document
@@ -60,7 +60,7 @@ class Span extends Base
 
             $link = $this->link($url, $text);
         } else {
-            $link = $this->link('#', $text.' (unresolved reference)');
+            $link = $this->link('#', $text . ' (unresolved reference)');
         }
 
         return $link;

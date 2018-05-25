@@ -9,7 +9,7 @@ class TableNode extends Base
     public function render()
     {
         $html = '<table class="table table-bordered">';
-        foreach ($this->data as $k=>&$row) {
+        foreach ($this->data as $k => &$row) {
             if (!$row) {
                 continue;
             }

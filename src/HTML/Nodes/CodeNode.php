@@ -11,7 +11,7 @@ class CodeNode extends Base
         if ($this->raw) {
             return $this->value;
         } else {
-            return "<pre><code class=\"".$this->language."\">".htmlspecialchars($this->value)."</code></pre>";
+            return "<pre><code class=\"" . $this->language . "\">" . htmlspecialchars($this->value) . "</code></pre>";
         }
     }
 }

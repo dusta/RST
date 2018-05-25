@@ -18,6 +18,6 @@ class Div extends SubDirective
 
     public function processSub(Parser $parser, $document, $variable, $data, array $options)
     {
-        return new WrapperNode($document, '<div class="'.$data.'">', '</div>');
+        return new WrapperNode($document, '<div class="' . $data . '">', '</div>');
     }
 }

@@ -103,7 +103,7 @@ class Builder
     protected function display($text)
     {
         if ($this->verbose) {
-            echo $text."\n";
+            echo $text . "\n";
         }
     }
 
@@ -150,7 +150,7 @@ class Builder
     {
         $this->display('* Rendering documents');
         foreach ($this->documents as $file => &$document) {
-            $this->display(' -> Rendering '.$file.'...');
+            $this->display(' -> Rendering ' . $file . '...');
             $target = $this->getTargetOf($file);
 
             $directory = dirname($target);
@@ -194,7 +194,7 @@ class Builder
     {
         $this->display('* Parsing files');
         while ($file = $this->getFileToParse()) {
-            $this->display(' -> Parsing '.$file.'...');
+            $this->display(' -> Parsing ' . $file . '...');
             // Process the file
             $rst = $this->getRST($file);
 
@@ -229,7 +229,7 @@ class Builder
             $dependencies = $document->getEnvironment()->getDependencies();
 
             if ($dependencies) {
-                $this->display(' -> Scanning dependencies of '.$file.'...');
+                $this->display(' -> Scanning dependencies of ' . $file . '...');
                 // Scan the dependencies for this document
                 foreach ($dependencies as $dependency) {
                     $this->scan($dependency);
@@ -257,7 +257,7 @@ class Builder
     {
         // If no decision is already made about this file
         if (!isset($this->states[$file])) {
-            $this->display(' -> Scanning '.$file.'...');
+            $this->display(' -> Scanning ' . $file . '...');
             $this->states[$file] = self::NO_PARSE;
             $entry = $this->metas->get($file);
             $rst = $this->getRST($file);
@@ -327,7 +327,7 @@ class Builder
      */
     protected function saveMetas()
     {
-        $metas = '<?php return '.var_export($this->metas->getAll(), true).';';
+        $metas = '<?php return ' . var_export($this->metas->getAll(), true) . ';';
         file_put_contents($this->getMetaFile(), $metas);
     }
 
@@ -392,7 +392,7 @@ class Builder
                 $destination = dirname($destination);
             }
 
-            shell_exec('cp -R '.$source.' '.$destination);
+            shell_exec('cp -R ' . $source . ' ' . $destination);
         }
     }
 

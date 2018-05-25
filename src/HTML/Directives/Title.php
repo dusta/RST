@@ -23,7 +23,7 @@ class Title extends Directive
     {
         $document = $parser->getDocument();
 
-        $document->addHeaderNode(new RawNode('<title>'.htmlspecialchars($data).'</title>'));
+        $document->addHeaderNode(new RawNode('<title>' . htmlspecialchars($data) . '</title>'));
 
         if ($node) {
             $document->addNode($node);
