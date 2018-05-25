@@ -10,7 +10,7 @@ use Dusta\RST\Nodes\RawNode;
 abstract class Document extends Node
 {
     protected $environment;
-    protected $headerNodes = array();
+    public $headerNodes = array();
     protected $nodes = array();
 
     public function __construct(Environment $environment)
@@ -145,6 +145,10 @@ abstract class Document extends Node
     public function addHeaderNode(Node $node)
     {
         $this->headerNodes[] = $node;
+    }
+    public function getHeaderNode()
+    {
+        return $this->headerNodes;
     }
 
     public function __toString()
