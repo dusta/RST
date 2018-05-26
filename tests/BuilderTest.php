@@ -1,4 +1,5 @@
 <?php
+namespace Dusta\RST\tests;
 
 use Dusta\RST\Builder;
 use Dusta\RST\Document;

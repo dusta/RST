@@ -1,4 +1,5 @@
 <?php
+namespace Dusta\RST\tests;
 
 use Dusta\RST\Environment;
 use PHPUnit\Framework\TestCase;
