@@ -47,9 +47,6 @@ echo '</body>';
 
 ```
 
-For more information, you can have a look at `test/document/document.rst` and its result
-`test/document/document.html`
-
 ## Writing directives
 
 ### Step 1: Extends the Directive class
