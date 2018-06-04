@@ -30,7 +30,7 @@ You can get it on the `GitHub page <https://github.com/Gregwar/RST>`_';
 $parser = $parser->parse($rst);
 $head = array();
 foreach ($parser->headerNodes as $node) {
-    $head[] = $node->render();
+    $headers[] = $node->render();
 }
 
 $headers = $document; // array
