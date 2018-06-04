@@ -10,7 +10,7 @@ use Dusta\RST\HTML\Nodes\MetaNode;
 /**
  * Add a meta information:
  *
- * .. meta::
+ * .. meta:: type
  *      :key: value
  */
 class Meta extends Directive
@@ -20,12 +20,12 @@ class Meta extends Directive
         return 'meta';
     }
 
-    public function process(Parser $parser, $node, $variable, $data, array $options)
+    public function process(Parser $parser, $node, $variable, $type, array $options)
     {
         $document = $parser->getDocument();
-
+        
         foreach ($options as $key => $value) {
-            $meta = new MetaNode($key, $value);
+            $meta = new MetaNode($type, $key, $value);
             $document->addHeaderNode($meta);
         }
 
