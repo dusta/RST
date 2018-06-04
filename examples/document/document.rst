@@ -1,7 +1,7 @@
 .. document::
 .. title:: Demo document
 .. stylesheet:: style.css
-.. meta:: 
+.. meta:: name
     :description: A demo Gregwar/RST document
 
 .. .. this is a comment!
