@@ -20,7 +20,7 @@ class Meta extends Directive
         return 'meta';
     }
 
-    public function process(Parser $parser, $node, $variable, $type, array $options)
+    public function process(Parser $parser, $node, $variable, $type = 'name', array $options)
     {
         $document = $parser->getDocument();
         
