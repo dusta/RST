@@ -1,6 +1,6 @@
 # RST
 
-[![Build status](https://travis-ci.org/dusta/RST.svg?branch=master)](https://travis-ci.org/dusta/RST)
+[![Build status](https://travis-ci.org/dusta/RST.svg?branch=master)](https://travis-ci.org/dusta/RST) [![Coverage Status](https://coveralls.io/repos/github/dusta/RST/badge.svg?branch=master)](https://coveralls.io/github/dusta/RST?branch=master)
 
 PHP library to parse reStructuredText document
 
